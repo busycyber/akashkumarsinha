@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Akash Kumar Sinha</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site">
+  <nav class="nav">
+    <a href="index.html" class="nav-name">AKASH <span>K.</span> SINHA</a>
+    <button class="nav-toggle" aria-label="Toggle menu"><span></span></button>
+
+
+<ul class="nav-links">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="about.html">About</a></li>
+  <li><a href="experience.html">Experience</a></li>
+  <li><a href="projects.html">Projects</a></li>
+  <li><a href="skills.html">Skills</a></li>
+  <li><a href="contact.html">Contact</a></li>
+</ul>
+
+
+  </nav>
+</header>
+
+<section class="page-head">
+  <div class="wrap">
+    <span class="query">
+      <span class="kw">INSERT INTO</span> inbox
+      <span class="kw2">VALUES</span> ('your message');
+    </span>
+
+
+<h1 class="display" style="margin-top:22px;">Let's Talk</h1>
+
+<p class="lede">
+  Open to new opportunities, collaborations, or just a conversation
+  about ERP systems and automation. Reach out directly — or send a
+  message using the form below.
+</p>
+
+
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="wrap">
+
+
+<div class="contact-grid">
+
+  <div class="contact-card">
+    <span class="tag">Email</span>
+    <a href="mailto:akash23495@gmail.com">
+      akash23495@gmail.com
+    </a>
+  </div>
+
+  <div class="contact-card">
+    <span class="tag">Phone</span>
+    <a href="tel:+916299504768">
+      +91 62995 04768
+    </a>
+  </div>
+
+  <div class="contact-card">
+    <span class="tag">LinkedIn</span>
+    <a href="https://linkedin.com/in/akash23495"
+       target="_blank"
+       rel="noopener">
+      linkedin.com/in/akash23495
+    </a>
+  </div>
+
+  <div class="contact-card">
+    <span class="tag">Location</span>
+    <span>Kolkata, West Bengal, India</span>
+  </div>
+
+</div>
+
+<div class="btn-row" style="margin-top:36px;">
+  <a href="mailto:akash23495@gmail.com" class="btn">
+    Send an Email →
+  </a>
+
+  <a href="tel:+916299504768" class="btn ghost">
+    Call Directly
+  </a>
+</div>
+
+
+  </div>
+</section>
+
+<section style="padding-top:50px;">
+  <div class="wrap">
+
+
+<span class="query">
+  <span class="kw">INSERT INTO</span> messages
+  <span class="kw2">VALUES</span> (...);
+</span>
+
+<h2 class="display" style="margin-top:22px;">
+  Send a Message
+</h2>
+
+<form id="contactForm" class="contact-form">
+
+  <input
+    type="text"
+    name="name"
+    placeholder="Your Name"
+    required
+  >
+
+  <input
+    type="email"
+    name="email"
+    placeholder="Your Email"
+    required
+  >
+
+  <input
+    type="text"
+    name="subject"
+    placeholder="Subject"
+    required
+  >
+
+  <textarea
+    name="message"
+    rows="6"
+    placeholder="Your Message"
+    required
+  ></textarea>
+
+  <button type="submit" class="submit-btn">
+    Submit
+  </button>
+
+  <p id="formStatus"></p>
+
+</form>
+
+
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap footer-grid">
+
+
+<div>
+  <span class="tag">Akash Kumar Sinha</span>
+
+  <span
+    style="
+      font-family:var(--font-mono);
+      font-size:13px;
+      color:var(--muted);
+    ">
+    Kolkata, West Bengal, India
+  </span>
+</div>
+
+<div class="footer-links">
+  <a href="mailto:akash23495@gmail.com">Email</a>
+
+  <a href="https://linkedin.com/in/akash23495"
+     target="_blank"
+     rel="noopener">
+     LinkedIn
+  </a>
+
+  <a href="index.html">Back to Home</a>
+</div>
+
+
+  </div>
+</footer>
+
+<!-- EmailJS -->
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+emailjs.init("6tpzrdzPobOqHXUmK");
+
+document
+.getElementById("contactForm")
+.addEventListener("submit", function(e){
+
+  e.preventDefault();
+
+  emailjs.sendForm(
+    "service_pu72ffi",
+    "template_wnnlwg5",
+    this
+  )
+  .then(() => {
+
+    document.getElementById("formStatus").innerHTML =
+      "✅ Message sent successfully!";
+
+    this.reset();
+
+  })
+  .catch((error) => {
+
+    document.getElementById("formStatus").innerHTML =
+      "❌ Failed to send message.";
+
+    console.error(error);
+
+  });
+
+});
+</script>
+
+<script src="main.js"></script>
+
+</body>
+</html>

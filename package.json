@@ -1,0 +1,21 @@
+{
+  "name": "akashkumarsinha-portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio website for Akash Kumar Sinha",
+  "main": "main.js",
+  "scripts": {
+    "build": "echo 'No build step required for static site'",
+    "dev": "python3 -m http.server 8000"
+  },
+  "keywords": [
+    "portfolio",
+    "website",
+    "oracle-ebs",
+    "developer"
+  ],
+  "author": "Akash Kumar Sinha",
+  "license": "MIT",
+  "dependencies": {
+    "@vercel/analytics": "^1.4.1"
+  }
+}
